@@ -13,7 +13,33 @@ proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 Buon lavoro e buon divertimento! */
 
 //gioco dadi:
+// recupero input e button dall'html con la creazione di due variabili:
+let playerNumber = document.getElementById('playerNumber');
+let button = document.getElementById('gameButton');
 
-//- Creo un array contenente i numeri del dado:
-const diceGame = [1,2,3,4,5,6] ;
+
+
+
+// Al click del button, inizia il gioco.
+   // - viene generato un numero random dal computer;
+           //- se il numero random generato è maggiore di quello dell'utente, vincerà il computer;
+           //- in caso contrario vincerà l'utente;
+
+button.addEventListener('click', function(){
+    for (i = 1; i <=6; i++){
+        let randomNumber = Math.floor(Math.random() * 7);
+        console.log(randomNumber);
+        
+    }
+
+    if (parseInt(playerNumber.value) < randomNumber){
+        document.getElementById('output').innerHTML = 'Vince il computer';
+    } else {
+        document.getElementById('output').innerHTML = 'Hai vinto!';
+
+    }
+
+    
+})           
+
 

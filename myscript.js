@@ -28,3 +28,23 @@ if (randomPlayerNumber > randomComputerNumber){
 } else {
     console.log('Parità!');
 }
+
+
+/* Mail
+Chiedi all’utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
+Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve?
+ */
+
+//recupero dall'html input utente
+let emailInput = document.getElementById('emailInput');
+
+//recupero dall'html il button per poi successivamente generare l'evento 'click'
+let button = document.getElementById('button');
+
+//creo array contenente email da controllare successivamente
+const emailArray = ['alessio@ciao.it', 'paolo@ciaociao.it', 'giorgia@buonanotte.it'];
+
+//Creo evento e solo dopo il click dell'utente, il sistema verificherà se la mail è presente;
+    //- creo ciclo for per scorrere la lista;
+    // - successivamente con l'if verifico se l'input utente è presente oppure no.
+
